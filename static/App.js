@@ -27,7 +27,7 @@ class App extends React.Component {
     this.state = {
       jokes: [
         ["Guy: Hey are you reading highway design? because I see nice “Curves” over there.", "Gal : You must be reading concrete technology, because I see “Creep” over there."],
-        ["Coarse Aggregate : Hey Sand, How are you?", "Sand: I’m “Fine”" ],
+        ["Coarse Aggregate : What's up my friend Sand, How are you!? ", "Sand: I’m “Fine”" ],
         ["Do you ever think about that Steel rebar that gets permanently buried in the concrete leading a life full of loneliness and suffocation?"],
         ["Column: Hey Bro.. What’s up?", "Beam: Nothing Bro.. Just Enjoying “Moments”"],
         ["What do electrical engineers like for breakfast?", "Ohmlets!"],
