@@ -51,7 +51,20 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    let that = this
+    window.addEventListener("keydown", checkKey);
+    function checkKey(e) {
+        e = e || window.event;
+        if (e.keyCode == '37') {
+          // left arrow
+          that.getPreviousSide();
+        }
+        else if (e.keyCode == '39') {
+          console.log('rightarrow')
+          that.getNextSlide();
+        }
 
+    }
   }
 
   componentDidUpdate() {
@@ -76,6 +89,7 @@ class App extends React.Component {
   }
 
   getNextSlide() {
+    console.log(newJokeIndex);
     var newJokeIndex = this.getNextIndex(this.state.jokeIndex, this.state.jokes.length - 1);
     var newIndex = this.getNextIndex(this.state.imgIndex, this.state.numImages - 1)
     this.setState({
