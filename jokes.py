@@ -9,3 +9,6 @@ APP_STATIC = os.path.join(APP_ROOT, 'static')
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
     return render_template('index.html')
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=2323)
