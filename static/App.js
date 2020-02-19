@@ -55,6 +55,7 @@ class App extends React.Component {
         [""],
         [""],
         [""],
+        [""],
         [""]
       ],
       numImages: 31,
