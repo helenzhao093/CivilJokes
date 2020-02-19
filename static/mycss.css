@@ -21,6 +21,15 @@ body {
   width: 100%;
 }
 
+.meme-background {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 400px;
+  min-width: 400px;
+}
+
+
 .section {
   display: flex;
   flex: 1;

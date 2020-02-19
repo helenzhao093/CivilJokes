@@ -5,7 +5,7 @@ class JokeBox extends React.Component {
 
   render() {
     return(
-      <div className={"contents-container"}>
+      <div style={this.props.style} className={"contents-container"}>
         <div className={"contents"}>
           <div className={"p-contents"}>
             {
@@ -37,10 +37,27 @@ class App extends React.Component {
         ["What did the structural engineer say to the architect?", "Nice buttress."],
         ["I am shocked about the local bridge being damaged.", "Can’t get over it."],
         ["Bridges are truss worthy"],
-        ["The suspension is killing me"]
-
+        ["The suspension is killing me"],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""]
       ],
-      numImages: 10,
+      numImages: 31,
       jokeIndex: 0,
       imgIndex: 0
     }
@@ -100,15 +117,18 @@ class App extends React.Component {
 
 
   render() {
-    console.log(this.state.imgIndex)
+    var jokeStyle = (this.state.jokes[this.state.jokeIndex][0].length == 0) ? {display: "none"} : {display: "block"}; 
+    var backgroundClass = (this.state.jokes[this.state.jokeIndex][0].length == 0) ? "meme-background":"image-background";
+    console.log(this.state.jokes[this.state.jokeIndex][0]);
+    console.log(backgroundClass);
     return (
       <div className={"section"}>
         <div className={"section-background"}>
-          <img className={"image-background"} src={`/static/bridge${this.state.imgIndex}.jpg`} />
+          <img className={backgroundClass} src={`/static/bridge${this.state.imgIndex}.jpg`} />
         </div>
         <div>
         <div className={"section-container"}>
-          <JokeBox joke={this.state.jokes[this.state.jokeIndex]} />
+          <JokeBox style={jokeStyle} joke={this.state.jokes[this.state.jokeIndex]} />
         </div>
         <div className={"button-container"}>
           <button onClick={this.getPreviousSide}>{"<"}</button>
